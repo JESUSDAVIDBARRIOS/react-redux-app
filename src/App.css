@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.barra-atv {
+  height: 10vh;
+  overflow: hidden;
+  padding: 0 30PX;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barra-atv > img {
+  max-height: 80%;
+}
+
+.boton {
+    width: 300px;
+    background: #18182f;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    height: 60px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
