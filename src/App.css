@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.grey-background {
+  background-color: #eaeaea;
+}
+
+.landing-div {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -38,28 +47,54 @@
 }
 
 .barra-atv {
-  height: 10vh;
+  height: 15vh;
   overflow: hidden;
   padding: 0 30PX;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed!important;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 30;
 }
 
 .barra-atv > img {
-  max-height: 80%;
+  max-height: 90%;
 }
 
 .boton {
-    width: 300px;
+  padding: 10px 20px;
     background: #18182f;
     color: #fff;
     border: none;
     border-radius: 30px;
-    height: 60px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
+    cursor: pointer;
+}
+
+.landingBody {
+  margin-top: 15vh;
+}
+
+.landing-first-div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.landing-first-div > div {
+  width: 45%;
+}
+
+@media (max-width: 750px) {
+  .landing-first-div > div {
+    width: 100%;
+  }
 }
