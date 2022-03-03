@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <nav className="barra-atv navbar">
         <img src={logo_atv} alt="logo" />
-        <div className='boton'>Quiero alcancías</div>
+        <div className='boton'>Quiero Alcancías</div>
       </nav>
       <div className='landingBody'>
         <div className='landing-div landing-first-container'>
@@ -21,7 +21,7 @@ function App() {
             <div className='landing-first-div-title-sec'>
               <h1 className='tituloLanding'><b>Vende + <br /><span>Llegando a +</span></b></h1>
               <h3>Flexibiliza tu sistema de pagos utilizando nuestro sistema de <b>Alcancías de Reserva y Compra</b></h3>
-              <div className='boton mb-4' style={{fontSize: "24px", padding: "30px 25px"}}>Quiero tener alcancías</div>
+              <div className='boton mb-4' style={{fontSize: "24px", padding: "30px 25px"}}>Quiero tener Alcancías</div>
               <h5>Permite que tus Clientes <b>Ahorren contigo y Compren después</b></h5>
             </div>
             <div className='first-div-img-container'>
@@ -47,7 +47,7 @@ function App() {
                   <h4 className='mb-3'><FontAwesomeIcon icon={faCheck} style={{ color: "#7e72fb" }} />  Determina una <b>tarifa por cancelación</b></h4>
                 </div>
                 <div>
-                <div className='boton' style={{fontSize: "24px", padding: "30px 25px"}}>Quiero tener alcancías</div>
+                <div className='boton' style={{fontSize: "24px", padding: "30px 25px"}}>Quiero tener Alcancías</div>
                 </div>
               </div>
           </div>
@@ -78,7 +78,7 @@ function App() {
 
         <div className='landing-last-div landing-div grey-background'>
           <div className='container'>
-            <h1>Empresas que utilizan nuestras alcancías</h1>
+            <h1>Empresas que utilizan nuestras Alcancías</h1>
             <div className='alies_images_container'>
               <img src={logo_ocesa} alt="Logo Ocesa" style={{marginBottom: "0"}} />
               <img src={logo_paramo} alt="Logo Ocesa" />

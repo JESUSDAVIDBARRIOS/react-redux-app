@@ -153,7 +153,7 @@ body {
 
 .first-div-img {
   width: 80%;
-  min-height: 50vh;
+  min-height: 70vh;
   border-radius: 10px;
   box-shadow: 0 0.125rem 0.35rem rgba(0, 0, 0, 0.4);
   background-image: url('./assets/music-crowd-festival-concert-bw-2018-c-billboard-1548.jpg');
@@ -202,7 +202,6 @@ body {
 }
 
 .advantages-container div {
-  display: inline-block;
   border-radius: 15px;
   min-width: 300px;
   max-width: 350px;
