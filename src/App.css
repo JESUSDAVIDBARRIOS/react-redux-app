@@ -1,3 +1,8 @@
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -47,7 +52,7 @@
 }
 
 .barra-atv {
-  height: 15vh;
+  height: 10vh;
   overflow: hidden;
   padding: 0 30PX;
   display: flex;
@@ -62,6 +67,7 @@
 
 .barra-atv > img {
   max-height: 90%;
+  max-width: 40%;
 }
 
 .boton {
@@ -76,15 +82,22 @@
     justify-content: center;
     align-content: center;
     cursor: pointer;
+    box-shadow: 0 0.125rem 0.15rem rgba(0, 0, 0, 0.4);
 }
 
 .landingBody {
-  margin-top: 15vh;
+  margin-top: 10vh;
+}
+
+.landing-first-container {
+  background-image: url('./assets/rayos_fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .landing-first-div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -93,8 +106,134 @@
   width: 45%;
 }
 
-@media (max-width: 750px) {
+.landing-first-div-title-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.landing-first-div-title-sec > h3 {
+  padding-bottom: 30px;
+}
+
+.tituloLanding {
+  font-size: 90px;
+  margin-bottom: 35px;
+}
+.tituloLanding span {
+  font-size: 70px;
+}
+
+@media (max-width: 991px) {
   .landing-first-div > div {
     width: 100%;
   }
+  .landing-first-div-title-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .tituloLanding {
+    font-size: 60px;
+  }
+
+  .tituloLanding span {
+    font-size: 50px;
+  }
 }
+
+.first-div-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-div-img {
+  width: 80%;
+  min-height: 50vh;
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.35rem rgba(0, 0, 0, 0.4);
+  background-image: url('./assets/music-crowd-festival-concert-bw-2018-c-billboard-1548.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.landing-third-container {
+  background-image: url('./assets/rayos_fondo2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #18182f;
+  color: white;
+}
+
+.what_to_do_div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.what_to_do_div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+}
+
+.what_to_do_div .boton {
+  border: 2px solid white;
+}
+
+@media (max-width: 750px) {
+  .what_to_do_div > div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.advantages-container {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.advantages-container div {
+  display: inline-block;
+  border-radius: 15px;
+  min-width: 300px;
+  max-width: 350px;
+  width: 27%;
+  box-shadow: 0 0.125rem 0.35rem rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 10px 2.16%;
+}
+.advantages-container h1 {
+  font-size: 80px;
+}
+
+.alies_images_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.alies_images_container > img{
+  width: 250px;
+}
+
+@media (max-width: 750px) {
+  .alies_images_container > img{
+    width: 80%;
+    margin: 0 10px 35px 10px;
+  }
+}
+
+.landing-footer {
+  padding: 10px 0;
+}
+
