@@ -1,4 +1,6 @@
 
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -161,6 +163,36 @@ body {
   background-repeat: no-repeat;
 }
 
+.alice-carousel__prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: fit-content!important;
+}
+
+.alice-carousel__next-btn {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: fit-content!important;
+}
+
+.alice-carousel__dots-item {
+  background-color: #7d72fb4d!important;
+}
+
+.alice-carousel__dots .__active {
+  background-color: #7e72fb!important;
+}
+
+.alice-carousel__next-btn-item {
+  color: #7e72fb!important;
+}
+
+.alice-carousel__next-btn-item:hover {
+  color: #ae38fe!important;
+}
+
 .landing-third-container {
   background-image: url('./assets/rayos_fondo2.png');
   background-size: cover;
@@ -203,7 +235,7 @@ body {
 
 .advantages-container div {
   border-radius: 15px;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 350px;
   width: 27%;
   box-shadow: 0 0.125rem 0.35rem rgba(0, 0, 0, 0.4);
@@ -212,6 +244,12 @@ body {
 }
 .advantages-container h1 {
   font-size: 80px;
+}
+
+@media (max-width: 991px) { 
+  .advantages-container {
+    justify-content: flex-start;
+  }
 }
 
 .alies_images_container {

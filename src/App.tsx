@@ -3,10 +3,37 @@ import logo_atv from './assets/logo_atv.png';
 import logo_ocesa from './assets/logo-ocesa.png';
 import logo_paramo from './assets/logo-paramo.png';
 import logo_turismo from './assets/logo_turismo.png';
+import step1_number from './assets/1.png'
+import step2_number from './assets/2.png'
+import step3_number from './assets/3.png'
+import step4_number from './assets/4.png'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faCheck, faMoneyCheckDollar, faHandshake, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+
+const handleDragStart = function (e : any) {e.preventDefault()};
+
+const items = [
+  <div onDragStart={handleDragStart} role="presentation">
+      <img src={step1_number} alt="1" />
+      <h1>Tus clientes abren su alcancía</h1>
+  </div>,
+  <div onDragStart={handleDragStart} role="presentation">
+  <img src={step2_number} alt="2" />
+  <h1>Aportan un % y reservan el producto</h1>
+</div>,
+<div onDragStart={handleDragStart} role="presentation">
+  <img src={step3_number} alt="3" />
+  <h1>Aportan lo que falta cuando puedan</h1>
+</div>,
+<div onDragStart={handleDragStart} role="presentation">
+  <img src={step4_number} alt="4" />
+  <h1>¡Llegan a la meta y compran el producto!</h1>
+</div>,
+];
 
 function App() {
   return (
@@ -33,7 +60,13 @@ function App() {
         </div>
 
         <div className='landing-div'>
-
+          <div className='container'>
+            <h1 className='mb-5' style={{color: "#7e72fb"}}>¿Cómo funciona?</h1>
+            <h4 className='mb-5'>ArmaTuVaca pone a tu disposición una <b>Plataforma de Reserva y Ahorro</b> para que Compradores interesados en adquirir tu Servicio puedan <b>aportar a su ritmo hasta llegar al total</b>, así:</h4>
+            <div>
+              <AliceCarousel mouseTracking items={items} autoPlay={true} infinite={true} autoPlayInterval={3000} />
+            </div>
+          </div>
         </div>
 
         <div className='landing-div landing-third-container'>
