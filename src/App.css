@@ -163,18 +163,27 @@ body {
   background-repeat: no-repeat;
 }
 
-.alice-carousel__prev-btn {
+.hiw_step_container {
+  padding: 0 5%;
+}
+
+.phone_step_img {
+  max-height: 300px;
+}
+
+.alice-carousel__prev-btn,  .alice-carousel__next-btn {
   position: absolute;
+  font-size: 20px;
   top: 50%;
-  left: 5%;
   width: fit-content!important;
 }
 
+.alice-carousel__prev-btn {
+  left: 0%;
+}
+
 .alice-carousel__next-btn {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  width: fit-content!important;
+  right: 0%;
 }
 
 .alice-carousel__dots-item {
