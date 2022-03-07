@@ -3,14 +3,14 @@ import logo_atv from './assets/logo_atv.png';
 import logo_ocesa from './assets/logo-ocesa.png';
 import logo_paramo from './assets/logo-paramo.png';
 import logo_turismo from './assets/logo_turismo.png';
-import step1_number from './assets/1.png'
-import step2_number from './assets/2.png'
-import step3_number from './assets/3.png'
-import step4_number from './assets/4.png'
-import step1 from './assets/step_1.png'
-import step2 from './assets/step_2.png'
-import step3 from './assets/step_3.png'
-import step4 from './assets/step_4.png'
+// import step1_number from './assets/1.png'
+// import step2_number from './assets/2.png'
+// import step3_number from './assets/3.png'
+// import step4_number from './assets/4.png'
+import step1 from './assets/step_1.png';
+import step2 from './assets/step_2.png';
+import step3 from './assets/step_3.png';
+import step4 from './assets/step_4.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AliceCarousel from 'react-alice-carousel';
