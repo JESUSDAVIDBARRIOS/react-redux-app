@@ -17,6 +17,8 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faCheck, faMoneyCheckDollar, faHandshake, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween } from 'react-gsap';
 
 const handleDragStart = function (e : any) {e.preventDefault()};
 
@@ -47,6 +49,9 @@ function App() {
         <div className='boton'>Quiero Alcancías</div>
       </nav>
       <div className='landingBody'>
+
+        <Controller>
+
         <div className='landing-div landing-first-container'>
           <div className='landing-first-div container'>
             <div className='landing-first-div-title-sec'>
@@ -62,24 +67,23 @@ function App() {
             </div>
           </div>
         </div>
-
         <div className='landing-div'>
-          <div className='container'>
-            <h1 className='mb-5' style={{color: "#7e72fb"}}>¿Cómo funciona?</h1>
-            <h4 className='mb-5'>ArmaTuVaca pone a tu disposición una <b>Plataforma de Reserva y Ahorro</b> para que Compradores interesados en adquirir tu Servicio puedan <b>aportar a su ritmo hasta llegar al total</b>, así:</h4>
-            <div>
-              <AliceCarousel mouseTracking items={items} autoPlay={true} infinite={true} autoPlayInterval={3000} responsive={
-                {
-                  0: {
-                      items: 1,
-                  },
-                  991: {
-                      items: 2
+            <div className='container'>
+              <h1 className='mb-5' style={{color: "#7e72fb"}}>¿Cómo funciona?</h1>
+              <h4 className='mb-5'>ArmaTuVaca pone a tu disposición una <b>Plataforma de Reserva y Ahorro</b> para que Compradores interesados en adquirir tu Servicio puedan <b>aportar a su ritmo hasta llegar al total</b>, así:</h4>
+              <div>
+                <AliceCarousel mouseTracking items={items} autoPlay={true} infinite={true} autoPlayInterval={3000} responsive={
+                  {
+                    0: {
+                        items: 1,
+                    },
+                    991: {
+                        items: 2
+                    }
                   }
-                }
-              } />
+                } />
+              </div>
             </div>
-          </div>
         </div>
 
         <div className='landing-div landing-third-container'>
@@ -100,26 +104,40 @@ function App() {
         </div>
 
         <div className='landing-div'>
+        
           <div className='container'>
             <h2 style={{fontSize: "36px"}} className='mb-5'>Animate a usar <span style={{color: "#7E72FB", fontWeight: "bold"}}>Alcancías,<br />no pierdas clientes</span> que no tienen todo el dinero</h2>
-            <div className='advantages-container'>
-              <div>
-                <h1><FontAwesomeIcon icon={faMoneyCheckDollar} style={{ color: "#03e09d" }} /></h1>
-                <h3>Aumenta tu target</h3>
-                <p>Vende a quienes tienen tarjetas de crédito o recursos disponibles, pero -especialmente- a quienes no. <b>Facilita y flexibiliza tu forma de pago.</b></p>
-              </div>
-              <div>
-                <h1><FontAwesomeIcon icon={faHandshake} style={{ color: "#003644" }} /></h1>
-                <h3>Fideliza a tus clientes</h3>
-                <p><b>Para que nunca se pierdan</b> tus eventos, inviten a otras personas y, reciban cashback redimibles en consumo o en futuras experiencias.</p>
-              </div>
-              <div>
-                <h1><FontAwesomeIcon icon={faUserGroup} style={{ color: "#7e72fb" }} /></h1>
-                <h3>Capta 1, Recibe 2</h3>
-                <p>Acepta <b>reservas y compras grupales</b>. Con una persona interesada pueden llegar 2.<br /><br />La vida se comparte, las cuentas también.</p>
-              </div>
-            </div>
+            
+              <Scene duration={100} offset={300} pin>
+                <Tween wrapper={<div className='advantages-container'/>}
+                  staggerFrom={{
+                    opacity: 0,
+                    cycle: {
+                      x: (i: any) => (i+1) * 50,
+                    },
+                    ease: 'ease-out',
+                  }}
+                  stagger={0.1}
+                >
+                <div>
+                  <h1><FontAwesomeIcon icon={faMoneyCheckDollar} style={{ color: "#03e09d" }} /></h1>
+                  <h3>Aumenta tu target</h3>
+                  <p>Vende a quienes tienen tarjetas de crédito o recursos disponibles, pero -especialmente- a quienes no. <b>Facilita y flexibiliza tu forma de pago.</b></p>
+                </div>
+                <div>
+                  <h1><FontAwesomeIcon icon={faHandshake} style={{ color: "#003644" }} /></h1>
+                  <h3>Fideliza a tus clientes</h3>
+                  <p><b>Para que nunca se pierdan</b> tus eventos, inviten a otras personas y, reciban cashback redimibles en consumo o en futuras experiencias.</p>
+                </div>
+                <div>
+                  <h1><FontAwesomeIcon icon={faUserGroup} style={{ color: "#7e72fb" }} /></h1>
+                  <h3>Capta 1, Recibe 2</h3>
+                  <p>Acepta <b>reservas y compras grupales</b>. Con una persona interesada pueden llegar 2.<br /><br />La vida se comparte, las cuentas también.</p>
+                </div>
+                </Tween>
+              </Scene>
           </div>
+        
         </div>
 
         <div className='landing-last-div landing-div grey-background'>
@@ -132,6 +150,8 @@ function App() {
             </div>
           </div>
         </div>
+
+        </Controller>
         <div className='landing-footer grey-background'>
           <div className='mb-3'><h6>Desarrollado con <FontAwesomeIcon icon={faHeart} style={{ color: "#7e72fb" }} /> por Evolution
         Ideas SAS ©</h6></div>

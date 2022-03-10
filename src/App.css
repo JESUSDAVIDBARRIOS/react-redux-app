@@ -9,6 +9,11 @@ body {
   text-align: center;
 }
 
+textarea:focus,
+input:focus,  *:focus {
+  outline: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -240,6 +245,8 @@ body {
   overflow-x: auto;
   display: flex;
   justify-content: center;
+  position: relative;
+  perspective: 4000px;
 }
 
 .advantages-container div {
@@ -269,7 +276,7 @@ body {
 }
 
 .alies_images_container > img{
-  width: 250px;
+  width: 200px;
 }
 
 @media (max-width: 750px) {
