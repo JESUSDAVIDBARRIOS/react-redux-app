@@ -4,7 +4,7 @@ const reducer = (state: String = initialState) => {
   return {
     type: 'VIEW_REDUCER',
     payload: {
-      view: 'view',
+      view: state,
     },
   };
 }
