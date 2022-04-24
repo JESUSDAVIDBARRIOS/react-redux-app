@@ -1,4 +1,4 @@
 export type Action = {
-    type: string,
-    payload: String
+    type: "changeViewAction",
+    payload: string
 }
